@@ -15,6 +15,7 @@ namespace WebApplication1
         SqlDataAdapter objadapt;
         SqlCommand objcomm;
         DataTable objdt;
+        string message;
         protected void Page_Load(object sender, EventArgs e)
         {
             string constr = @"Data Source=RISHABH\SQLEXPRESS;Initial catalog=CRM; Integrated Security=sspi";
@@ -56,10 +57,12 @@ namespace WebApplication1
         protected void btnupdate_Click(object sender, EventArgs e)
         {
             ddlemployeeid.Items.Clear();
-            objcomm = new SqlCommand("Insert into Employee(EmployeeName,Designation,Address)values('" + txtemployeename.Text + "','" + txtdesignation.Text + "','" + txtaddress + "')",objcon);
+            objcomm = new SqlCommand("Insert into Employee (EmployeeName,Designation,Address)values('"+txtemployeename.Text+"','"+txtdesignation.Text+"','"+txtaddress.Text+"')",objcon);
             objcon.Open();
             objcomm.ExecuteNonQuery();
             objcon.Close();
+            //message = "Record Update successfully!";
+            //ClientScript.RegisterStartupScript(this.GetType(), "alert", "alert('" + message + "');", true);
         }
     }
 }

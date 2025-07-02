@@ -5,6 +5,8 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using System.Data;
+using System.Text;
 
 namespace WebApplication1
 {
@@ -52,14 +54,14 @@ namespace WebApplication1
 
         protected void btnsubmit_Click(object sender, EventArgs e)
         {
-            string datetoday = DateTime.Now.ToString();
+            string datetoday = DateTime.Now.ToString("yyyy-MM-dd");
             string status = "Not Completed";
             username = Session["Username"].ToString();
             objcomm =new SqlCommand("Insert into ComplainRegistration(Username,ComplainNumber,ProblemType,Description)values('" + username +"','"+complainnum.ToString()+"','"+ddlproblemtype.Text+"','"+txtdescription.Text+"')",objcon);
             objcon.Open();
             objcomm.ExecuteNonQuery();
             objcon.Close();
-            objcomm = new SqlCommand("Insert into Complain(Username,ComplainNumber,ProblemType,Description,Status,DateofComplain)values('" + username + "','" + complainnum.ToString() + "','" + ddlproblemtype.Text + "','" + txtdescription.Text + "','"+status+"','"+datetoday+"')", objcon);
+            objcomm = new SqlCommand("Insert into Complain(Username,ComplainNumber,ProblemType,Description,Status,DateofComplain)values('" + username + "','" + complainnum.ToString() + "','" + ddlproblemtype.Text + "','" + txtdescription.Text + "','"+status+"','" + datetoday + "')", objcon);
             objcon.Open();
             objcomm.ExecuteNonQuery();
             objcon.Close();

@@ -4,7 +4,7 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title></title>
+    <title>View Complain</title>
     <style type="text/css">
 
         .tableformat {
@@ -39,7 +39,7 @@
         .auto-style4 {
             width: 1000px;
             height: 500px;
-            background-color:#e6eeff;
+            background-color:lightskyblue;
         }
         .auto-style9 {
             width: 201px;
@@ -50,12 +50,16 @@
         .auto-style7 {
             width: 1000px;
             height: 100px;
-            background-color:#e6eeff;
-            border-top:2px solid black;
+            background-color:#19546d;
         }
         .auto-style10 {
             width: 500px;
             height: 400px;
+            background-color: #88ec90;
+            border-style: ridge;
+            border-width: 5px;
+            border-color: goldenrod;
+            Padding: 12px;
         }
         .auto-style11 {
             height: 60px;
@@ -66,9 +70,17 @@
         .auto-style13 {
             margin-bottom: 33px;
         }
-        body{
-    background-color:#ccff66;
-}
+        body {
+            background-color: #ccff66;
+        }
+        .footer-links {
+            color: white;
+            padding: 20px;
+        }
+
+        .footer-link {
+            color: white;
+        }
     </style>
 </head>
 <body>
@@ -128,9 +140,9 @@
                 <table cellspacing="0" class="auto-style10">
                     <tr>
                         <td class="auto-style11">
-                            <asp:RadioButton ID="rbtnviewall" runat="server" Text="View All" Font-Bold="True" />
-                            <asp:RadioButton ID="rbtncompleted" runat="server" Text="Completed" Font-Bold="True" />
-                            <asp:RadioButton ID="rbtnnotcompleted" runat="server" Text="Not Completed" Font-Bold="True" />
+                            <asp:RadioButton ID="rbtnviewall" runat="server" Text="View All" Font-Bold="True" GroupName="rbtn" />
+                            <asp:RadioButton ID="rbtncompleted" runat="server" Text="Completed" Font-Bold="True" GroupName="rbtn" />
+                            <asp:RadioButton ID="rbtnnotcompleted" runat="server" Text="Not Completed" Font-Bold="True" GroupName="rbtn" />
                         </td>
                     </tr>
                     <tr>
@@ -141,7 +153,7 @@
                     </tr>
                     <tr>
                         <td>
-                            <asp:Button ID="btnshow" runat="server" Text="Show" OnClick="btnshow_Click" BackColor="#FF9966" BorderStyle="None" Font-Bold="True" ForeColor="White" Height="27px" Width="85px" />
+                           <center> <asp:Button ID="btnshow" runat="server" Text="Show" OnClick="btnshow_Click" BackColor="#FF9966" BorderStyle="None" Font-Bold="True" ForeColor="White" Height="27px" Width="85px" /></center>
                         </td>
                     </tr>
                 </table>
@@ -152,10 +164,22 @@
     </table>
     <table cellspacing="0" class="auto-style7" border="0">
         <tr>
-          <td><center>IISE Group of Institutes, Lucknow, Kalyanpur West, Mohhamadpur Khatri,226022<br />
-                Important Links<br />
-                <a href="http://www.CRM.com">www.CRM.com</a>, +91-9865234565<br /></center>
-            </td>
+         <td>
+    <center>
+
+        <span class="footer-links">
+            <a href="mailto:crmindia@gmail.com" class="footer-link">crmindia@gmail.com</a> |
+            <a href="tel:+919865234565" class="footer-link">+91-9865234565</a>
+            <p>&copy; 2025 Your Company Name. All rights reserved.</p>
+        </span>
+        <span class="footer-social">
+            <b>Follow us: </b>
+            <a href="#" class="footer-link">Facebook</a> |
+            <a href="#" class="footer-link">Twitter</a> |
+            <a href="#" class="footer-link">Instagram</a>
+        </span>
+    </center>
+</td>
         </tr>
     </table>
             </center>

@@ -45,7 +45,7 @@ namespace WebApplication1
 
         protected void btnsubmit_Click(object sender, EventArgs e)
         {
-            string datetoday = DateTime.Now.ToString();
+            String datetoday = DateTime.Now.ToString();
             objcomm = new SqlCommand("Insert into TrackComplain(ComplainNumber,Workdone,Dateofupdate,status)values('"+ddlcomplainnumber.Text+"','"+txtworkdone.Text+"','"+datetoday+"','"+ddlstatus.Text+"')",objcon);
             objcon.Open();
             objcomm.ExecuteNonQuery();

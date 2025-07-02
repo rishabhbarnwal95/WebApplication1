@@ -4,7 +4,7 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title></title>
+    <title>About Us</title>
     <style type="text/css">
 
 
@@ -53,16 +53,25 @@
             vertical-align:top;
             color:black;
             word-spacing:0.2px;
-            padding:5px;
+            padding:8px;
+            font-size:15px;
+            
         }
         .auto-style7 {
             width: 1000px;
             height: 100px;
-            background-color:#e6eeff;
-            border-top:2px solid black;
+            background-color:#19546d;
         }
         body{
             background-color:#ccff66;
+        }
+        .footer-links{
+            color:white;
+            padding:20px;
+
+        }
+        .footer-link {
+            color: white;
         }
         </style>
 </head>
@@ -124,18 +133,28 @@
     </table>
     <table cellspacing="0" class="auto-style4" border="0">
         <tr>
-            
             <td class="auto-style6"><img src="images/aboutimage.png" /></td>
-            <td class="tdB"><b><p class="tdB">Welcome to our Customer Relation Management (CRM) platform! We are dedicated to helping businesses foster stronger relationships with their customers through innovative and user-friendly CRM solutions. Our platform is designed to streamline customer interactions, enhance communication, and boost overall efficiency.
+            <td class="tdB"> <center><h2>About Us</h2></center><b><p class="tdB">Welcome to our Customer Relation Management (CRM) platform! We are dedicated to helping businesses foster stronger relationships with their customers through innovative and user-friendly CRM solutions. Our platform is designed to streamline customer interactions, enhance communication, and boost overall efficiency.
 
 At CRM, we believe that every business deserves the tools to succeed in today’s competitive market. Whether you are a small startup or a large enterprise, our CRM solutions are tailored to meet your unique needs. With features like contact management, sales tracking, and customer support integration, we empower you to stay connected with your customers and grow your business.</p></b></td>
         </tr>
     </table>
     <table cellspacing="0" class="auto-style7" border="0">
         <tr>
-          <td><center>IISE Group of Institutes, Lucknow, Kalyanpur West, Mohhamadpur Khatri,226022<br />
-                Important Links<br />
-                <a href="http://www.CRM.com">www.CRM.com</a>, +91-9865234565<br /></center>
+                    <td><center>
+
+                  <span class="footer-links">
+    <a href="mailto:crmindia@gmail.com" class="footer-link">crmindia@gmail.com</a> |
+    <a href="tel:+919865234565" class="footer-link">+91-9865234565</a> 
+                      <p>&copy; 2025 Your Company Name. All rights reserved.</p>
+                  </span>
+<span class="footer-social">
+   <b> Follow us: </b>
+    <a href="#" class="footer-link">Facebook</a> |
+    <a href="#" class="footer-link">Twitter</a> |
+    <a href="#" class="footer-link">Instagram</a>
+</span>
+                </center>
             </td>
         </tr>
     </table>

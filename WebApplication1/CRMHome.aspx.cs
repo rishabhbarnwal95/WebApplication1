@@ -33,7 +33,7 @@ namespace WebApplication1
             if (objdt.Rows.Count > 0)
             {
                 Session["username"] = objdt.Rows[0]["username"].ToString();
-
+                Session["Password"] = objdt.Rows[0]["Password"].ToString();
                 if (objdt.Rows[0]["usertype"].ToString() == "Admin")
                 {
                     Response.Redirect("CRMAdminpanel.aspx");
@@ -86,6 +86,11 @@ namespace WebApplication1
         protected void lbtnhelp_Click(object sender, EventArgs e)
         {
             Response.Redirect("CRMFAQ.aspx");
+        }
+
+        protected void lbtnteams_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("CRMTeams.aspx");
         }
     }
 }

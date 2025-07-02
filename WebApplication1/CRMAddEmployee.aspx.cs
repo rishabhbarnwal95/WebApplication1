@@ -59,7 +59,8 @@ namespace WebApplication1
             objcon.Open();
             objcomm.ExecuteNonQuery();
             objcon.Close();
-            Response.Redirect("CRMAdminpanel.aspx");
+            Response.Redirect("CRMAddEmpReply.aspx?password=" + Password);
+
         }
 
         protected void LinkButton1_Click(object sender, EventArgs e)

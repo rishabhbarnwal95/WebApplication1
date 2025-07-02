@@ -18,15 +18,16 @@ namespace WebApplication1
         SqlDataAdapter objadapt;
         SqlCommand objcomm;
         DataTable objdt;
+        string password;
         protected void Page_Load(object sender, EventArgs e)
         {
             string constr = @"Data Source=RISHABH\SQLEXPRESS;Initial catalog=CRM; Integrated Security=sspi";
             objcon = new SqlConnection(constr);
-            lblmatchpassword.Visible = false;
+            password = Session["Password"].ToString();
+           
             lblMessage.Visible = false;
-            objadapt = new SqlDataAdapter("Select * from login where username='" + Session["Username"].ToString() + "'", objcon);
-            objdt = new DataTable();
-            objadapt.Fill(objdt);
+            
+
         }
         protected void LinkButton1_Click(object sender, EventArgs e)
         {
@@ -40,27 +41,29 @@ namespace WebApplication1
 
         protected void btnchange_Click(object sender, EventArgs e)
         {
-            byte[] tempassword = ASCIIEncoding.ASCII.GetBytes(txtpassword.Text);
-            string password = Convert.ToBase64String(tempassword);
+            //byte[] tempassword = ASCIIEncoding.ASCII.GetBytes(txtpassword.Text);
+            //string password = Convert.ToBase64String(tempassword);
 
-            byte[] tempassword1 = ASCIIEncoding.ASCII.GetBytes(txtpassword.Text);
-            string newpassword = Convert.ToBase64String(tempassword1);
+            //byte[] tempassword1 = ASCIIEncoding.ASCII.GetBytes(txtpassword.Text);
+            //string newpassword = Convert.ToBase64String(tempassword1);
 
-            lblmatchpassword.Visible = true;
+
             lblMessage.Visible = true;
-            string currentPassword = objdt.Rows[0]["Password"].ToString();
-            if(currentPassword==txtpassword.Text)
+            
+           
+            if(password==txtpassword.Text)
             {
                 if(txtnewpassword.Text==txtconfirmpassword.Text)
                 {               
-                    objcomm = new SqlCommand("Update login set NewPassword='" + txtnewpassword.Text + "'", objcon);
+                    objcomm = new SqlCommand("Update login set Password='" + txtnewpassword.Text + "' where Password='"+txtpassword.Text+"' and username='" + Session["Username"].ToString()+"'", objcon);
                     objcon.Open();
                     objcomm.ExecuteNonQuery();
                     objcon.Close();
+                    lblMessage.Text = "Password changed sucesssfully";
                 }
                 else
                 {                    
-                    lblmatchpassword.Text = "Your password does not match";
+                    lblMessage.Text = "Your password does not match";
                     txtconfirmpassword.Focus();
                 }
                
@@ -70,7 +73,7 @@ namespace WebApplication1
                 lblMessage.Text = "Your password doesn't match with database";
                 txtpassword.Focus();
             }
-            Response.Redirect("CRMEmployeepanel.aspx");
+            //Response.Redirect("CRMEmployeepanel.aspx");
         }
 
         protected void lbtnback_Click(object sender, EventArgs e)

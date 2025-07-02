@@ -9,9 +9,11 @@ namespace WebApplication1
 {
     public partial class CRMEmployeepanel : System.Web.UI.Page
     {
+        string password;
         protected void Page_Load(object sender, EventArgs e)
         {
             lblwelcome.Text = "Welcome " + Session["username"].ToString();
+            password = Session["Password"].ToString();
         }
 
         protected void LinkButton1_Click(object sender, EventArgs e)
@@ -41,7 +43,9 @@ namespace WebApplication1
 
         protected void lbtnchangepassword_Click(object sender, EventArgs e)
         {
+            Session["Password"] = password;
             Response.Redirect("CRMChangePassword.aspx");
+
         }
     }
 }

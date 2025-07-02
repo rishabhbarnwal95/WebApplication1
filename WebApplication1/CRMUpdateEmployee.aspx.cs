@@ -12,19 +12,20 @@ namespace WebApplication1
     public partial class CRM_Update_Employee1 : System.Web.UI.Page
     {
         SqlConnection objcon;
-        SqlDataAdapter objadapt;
+        SqlDataAdapter objadapt,objadapt1;
         SqlCommand objcomm;
-        DataTable objdt;
+        DataTable objdt,objdt1;
         protected void Page_Load(object sender, EventArgs e)
         {
             string constr = @"Data Source=RISHABH\SQLEXPRESS;initial catalog=CRM;integrated security=sspi";
             objcon = new SqlConnection(constr);
-            ddlemployeeid.Items.Clear();
+            
             objadapt = new SqlDataAdapter("Select * from Employee", objcon);
             objdt = new DataTable();
             objadapt.Fill(objdt);
             if (!IsPostBack)
             {
+                
                 foreach (DataRow dr in objdt.Rows)
                 {
                     ddlemployeeid.Items.Add(dr["EmployeeID"].ToString());
@@ -56,13 +57,18 @@ namespace WebApplication1
             Response.Redirect("CRMAdminpanel.aspx");
         }
 
-        protected void ddlemployeeid_SelectedIndexChanged(object sender, EventArgs e)
+  
+
+        protected void ddlemployeeid_SelectedIndexChanged1(object sender, EventArgs e)
         {
-            txtemployeename.Text = objdt.Rows[0]["EmployeeName"].ToString();
-            lbldate.Text = objdt.Rows[0]["JoinningDate"].ToString();
-            txtsalary.Text = objdt.Rows[0]["Salary"].ToString();
-            txtdesignation.Text = objdt.Rows[0]["Designation"].ToString();
-            txtaddress.Text = objdt.Rows[0]["Address"].ToString();
+            objadapt = new SqlDataAdapter("select * from Employee where EmployeeID='"+ddlemployeeid.Text+"'", objcon);
+            objdt1 = new DataTable();
+            objadapt.Fill(objdt1);
+            txtemployeename.Text = objdt1.Rows[0]["EmployeeName"].ToString();
+            lbldate.Text = objdt1.Rows[0]["JoinningDate"].ToString();
+            txtsalary.Text = objdt1.Rows[0]["Salary"].ToString();
+            txtdesignation.Text = objdt1.Rows[0]["Designation"].ToString();
+            txtaddress.Text = objdt1.Rows[0]["Address"].ToString();
         }
     }
 }

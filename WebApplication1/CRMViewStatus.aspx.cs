@@ -19,13 +19,15 @@ namespace WebApplication1
         {
             string constr= @"Data Source=RISHABH\SQLEXPRESS;Initial catalog=CRM; Integrated Security=sspi";
             objcon = new SqlConnection(constr);
-            ddlcomplainnum.Items.Clear();
             objadapt = new SqlDataAdapter("Select * from Complain", objcon);
             objdt = new DataTable();
             objadapt.Fill(objdt);
-            foreach(DataRow dr in objdt.Rows)
+            if (!IsPostBack)
             {
-                ddlcomplainnum.Items.Add(dr["ComplainNumber"].ToString());
+                foreach (DataRow dr in objdt.Rows)
+                {
+                    ddlcomplainnum.Items.Add(dr["ComplainNumber"].ToString());
+                }
             }
         }
 

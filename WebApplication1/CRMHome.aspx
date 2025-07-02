@@ -5,7 +5,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <link rel="stylesheet" href="Style.css" type="text/css"/>
-    <title></title>
+    <title>Home</title>
     <style type="text/css">
         .tableformat {
             width: 1000px;
@@ -45,44 +45,72 @@
             background-color:#e6eeff;
         }
         .auto-style6 {
-            width: 587px;
+            width: 620px;
+            background-color:white;
         }
+          
+        
         .auto-style7 {
             width: 1000px;
             height: 100px;
-            background-color:#e6eeff;
-            border-top:2px solid black;
+            background-color:#19546d;
+        }
+        .p3{
+            font-family:Arial;
+            color:white;
         }
         .auto-style8 {
             vertical-align:top;
             width: 200px;
             height: 150px;
         }
+        .t1{
+            text-align:justify;
+            padding-left:10px;
+        }
         body{
            background-color:#ccff66;
         } 
-        /* New Sidebar Styles */
-.sidebar {
-    width: 170px;
-    background-color: white;
-    color: white;
-    height: 500px;
-    overflow: auto;
-    float:left;
-    text-align:left;
-}
-.sidebar a {
-    display: block;
-    color: black;
-    font-family:'Book Antiqua';
-    padding: 10px;
-    text-decoration: none;
-}
-.sidebar a:hover {
-    background-color: #575757;
-}
         .auto-style9 {
-            width: 176px;
+            width: 200px;
+            height:500px;
+            background-color:#e6eeff;
+            color:black;
+            padding:12px;
+            
+        }
+        .p1{
+            display:flex;
+            font-family:'Calisto MT';
+            color:orangered;
+            font-size:18px;
+            align-items:center;
+            margin-left: 10px;
+            text-decoration: none;
+        }
+        .a1{
+            align-items:center;
+            padding-left:10px;
+            font-family:'Calisto MT';
+            color:orangered;
+            font-size:18px;
+            box-shadow:
+        }
+        .h2{
+            align-items:center;
+            padding-left:10px;
+            color:orangered;
+        }
+        .footer-links{
+            color:white;
+            padding:20px;
+        }
+        .footer-link{
+            color:white;
+            
+        }
+        .l1{
+            margin-left:10px;
         }
         </style>
 
@@ -93,7 +121,7 @@
         <div>
             <table cellspacing="0" class="tableformat" border="0">
                 <tr>
-                    <td rowspan="2" class="auto-style1">&nbsp;<img src="images/hand%20logo.jpeg" width="200px" height="200px" class="auto-style1" /></td>
+                    <td rowspan="2" class="auto-style1">&nbsp;<img src="images/hand%20logo.jpeg"  class="auto-style1" /></td>
                     <td class="auto-style2">
                     </td>
                     <td class="auto-style2">
@@ -143,32 +171,29 @@
     <table cellspacing="0" class="auto-style4" border="0">
         <tr>
             <td class="auto-style9">
-                <div class="sidebar">
-    <a href="#home">Home</a>
-    <a href="#Register">Register</a>
-    <a href="#ContactUs">Contact Us</a>
-    <a href="#AboutUs">About Us</a>
-    <a href="#Help">Help</a>
-</div>
-                &nbsp;</td>
+                <h2 class="h2">Our Roles</h2>
+           <p class="p1">We innovate for future.</p>
+              <asp:LinkButton ID="lbtnteams" runat="server" OnClick="lbtnteams_Click" ForeColor="Red" class="l1">Teams</asp:LinkButton>
+            </td>
             <td class="auto-style6">
-                &nbsp;</td>
+                <img src="images/crm.jpg" />
+            </td>
             <td>
                 <table cellspacing="0" class="auto-style8">
                     <tr>
-                        <td>
+                        <td class="t1">
                             <asp:Label ID="Label11" runat="server" Text="Name" Font-Bold="True"></asp:Label>
                             <asp:TextBox ID="txtname" runat="server"></asp:TextBox>
                         </td>
                     </tr>
                     <tr>
-                        <td>
+                        <td class="t1">
                             <asp:Label ID="Label12" runat="server" Text="Password" Font-Bold="True"></asp:Label>
                             <asp:TextBox ID="txtpassword" runat="server"></asp:TextBox>
                         </td>
                     </tr>
                     <tr>
-                        <td>
+                        <td class="t1">
                             <asp:Button ID="btnlogin" runat="server" Text="Login" OnClick="btnlogin_Click" BackColor="#FF9966" BorderStyle="None" Font-Bold="True" ForeColor="White" Height="27px" Width="65px"/>
                             <asp:Label ID="lbllogin" runat="server" Text="Label"></asp:Label>
                         </td>
@@ -179,9 +204,20 @@
     </table>
     <table cellspacing="0" class="auto-style7" border="0">
         <tr>
-          <td><center>IISE Group of Institutes, Lucknow, Kalyanpur West, Mohhamadpur Khatri,226022<br />
-                Important Links<br />
-                <a href="http://www.CRM.com">www.CRM.com</a>, +91-9865234565<br /></center>
+          <td><center>
+
+                  <span class="footer-links">
+    <a href="mailto:crmindia@gmail.com" class="footer-link">crmindia@gmail.com</a> |
+    <a href="tel:+919865234565" class="footer-link">+91-9865234565</a> 
+                      <p>&copy; 2025 Your Company Name. All rights reserved.</p>
+                  </span>
+<span class="footer-social">
+   <b> Follow us: </b>
+    <a href="#" class="footer-link">Facebook</a> |
+    <a href="#" class="footer-link">Twitter</a> |
+    <a href="#" class="footer-link">Instagram</a>
+</span>
+                </center>
             </td>
         </tr>
     </table>

@@ -4,7 +4,7 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title></title>
+    <title>Contact Us</title>
     <style type="text/css">
 
         .tableformat {
@@ -58,11 +58,18 @@
         .auto-style7 {
             width: 1000px;
             height: 100px;
-            background-color:#e6eeff;
-            border-top:2px solid black;
+            background-color:#19546d;
         }
         body{
             background-color:#ccff66;
+        }
+        .footer-links {
+            color: white;
+            padding: 20px;
+        }
+
+        .footer-link {
+            color: white;
         }
         </style>
 </head>
@@ -127,7 +134,7 @@
             <td class="auto-style9">&nbsp;</td>
             <td class="auto-style6">
                 <center><asp:Label ID="Label2" runat="server" Text="Contact Us" Font-Bold="True" Font-Size="22pt" Font-Names="Berlin Sans FB Demi"></asp:Label><hr color="black"/></center>
-              <center>  <p>Our office is situated at Gomti Nagar VibhutiKhand (Lucknow) 226010. Our email is <a href="mailto:crm@gmail.com">crm@gmail.com</a> or contact-220456.</p>
+              <center>  <p>Our office is situated at Gomti Nagar VibhutiKhand (Lucknow) 226010. Our email is <a href="mailto:crmindia@gmail.com">crmindia@gmail.com</a> or contact-220456.</p>
                 <img src="images/contact.png" /></center>
             </td>
             <td class="tdB">
@@ -136,9 +143,20 @@
     </table>
     <table cellspacing="0" class="auto-style7" border="0">
         <tr>
-          <td><center>IISE Group of Institutes, Lucknow, Kalyanpur West, Mohhamadpur Khatri,226022<br />
-                Important Links<br />
-                <a href="http://www.CRM.com">www.CRM.com</a>, +91-9865234565<br /></center>
+                    <td><center>
+
+                  <span class="footer-links">
+    <a href="mailto:crmindia@gmail.com" class="footer-link">crmindia@gmail.com</a> |
+    <a href="tel:+919865234565" class="footer-link">+91-9865234565</a> 
+                      <p>&copy; 2025 Your Company Name. All rights reserved.</p>
+                  </span>
+<span class="footer-social">
+   <b> Follow us: </b>
+    <a href="#" class="footer-link">Facebook</a> |
+    <a href="#" class="footer-link">Twitter</a> |
+    <a href="#" class="footer-link">Instagram</a>
+</span>
+                </center>
             </td>
         </tr>
     </table>

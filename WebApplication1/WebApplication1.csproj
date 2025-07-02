@@ -67,9 +67,11 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="CRMAddEmpReply.aspx" />
     <Content Include="CRMChangePassword.aspx" />
     <Content Include="CRMComplainRegistrationReply.aspx" />
     <Content Include="CRMEmployeepanel.aspx" />
+    <Content Include="CRMTeams.aspx" />
     <Content Include="CRMUpdateEmployee.aspx" />
     <Content Include="CRMAboutUs.aspx" />
     <Content Include="CRMAddEmployee.aspx" />
@@ -90,11 +92,22 @@
     <Content Include="images\background.jpeg" />
     <Content Include="images\bird.png" />
     <Content Include="images\contact.png" />
+    <Content Include="images\crm.jpg" />
     <Content Include="images\hand logo.jpeg" />
-    <Content Include="Style.css" />
+    <Content Include="images\mice.png" />
+    <Content Include="images\self.jpg" />
+    <Content Include="images\tom.jpg" />
+    <Content Include="Testing.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CRMAddEmpReply.aspx.cs">
+      <DependentUpon>CRMAddEmpReply.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CRMAddEmpReply.aspx.designer.cs">
+      <DependentUpon>CRMAddEmpReply.aspx</DependentUpon>
+    </Compile>
     <Compile Include="CRMChangePassword.aspx.cs">
       <DependentUpon>CRMChangePassword.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -115,6 +128,13 @@
     </Compile>
     <Compile Include="CRMEmployeepanel.aspx.designer.cs">
       <DependentUpon>CRMEmployeepanel.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CRMTeams.aspx.cs">
+      <DependentUpon>CRMTeams.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CRMTeams.aspx.designer.cs">
+      <DependentUpon>CRMTeams.aspx</DependentUpon>
     </Compile>
     <Compile Include="CRMUpdateEmployee.aspx.cs">
       <DependentUpon>CRMUpdateEmployee.aspx</DependentUpon>
@@ -229,6 +249,13 @@
       <DependentUpon>CRMViewStatus.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Testing.aspx.cs">
+      <DependentUpon>Testing.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Testing.aspx.designer.cs">
+      <DependentUpon>Testing.aspx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

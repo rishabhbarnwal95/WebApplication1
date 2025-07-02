@@ -13,7 +13,6 @@ namespace WebApplication1
         {
             String complainnum=Session["Complainnum"].ToString();
             lblreply.Text = "Your Complain is registered and your complain number is "+complainnum;
-            
         }
 
         protected void lbtnback_Click(object sender, EventArgs e)

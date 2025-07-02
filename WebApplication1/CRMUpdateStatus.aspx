@@ -4,7 +4,7 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title></title>
+    <title>Update Status</title>
     <style type="text/css">
 
 
@@ -44,32 +44,51 @@
         }
         .auto-style9 {
             width: 201px;
+            background-color:lightskyblue;
         }
         .auto-style6 {
             width: 587px;
+            background-color:lightskyblue;
+        }
+        .auto-style6a{
+            background-color:lightskyblue;
         }
         .auto-style7 {
             width: 1000px;
             height: 100px;
-            background-color:#e6eeff;
-            border-top:2px solid black;
+            background-color:#19546d;
         }
         .auto-style10 {
             width: 500px;
             height: 300px;
+            background-color: #88ec90;
+            border-style: ridge;
+            border-width: 5px;
+            border-color: goldenrod;
+            padding:20px;
         }
         .auto-style11 {
             width: 180px;
+            padding:12px;
         }
         .auto-style12 {
             width: 180px;
             height: 156px;
+            vertical-align:top;
         }
         .auto-style13 {
             height: 156px;
         }
         body{
             background-color:#ccff66;
+        }
+        .footer-links {
+            color: white;
+            padding: 20px;
+        }
+
+        .footer-link {
+            color: white;
         }
     </style>
 </head>
@@ -123,7 +142,7 @@
         <tr>
             <td class="auto-style9">&nbsp;</td>
             <td class="auto-style6">
-          <center><table cellspacing="0" class="auto-style10">
+          <table cellspacing="0" class="auto-style10">
                     <tr>
                         <td class="auto-style11">
                             <asp:Label ID="Label2" runat="server" Text="Complain No." Font-Bold="True"></asp:Label>
@@ -156,17 +175,28 @@
                             <asp:Button ID="btnsubmit" runat="server" Text="Submit" OnClick="btnsubmit_Click" BackColor="#FF9966" BorderStyle="None" Font-Bold="True" ForeColor="White" Height="27px" Width="85px" />
                         </td>
                     </tr>
-                </table></center>
+                </table>
             </td>
-            <td>
+            <td class="auto-style6a">
                 &nbsp;&nbsp;</td>
         </tr>
     </table>
     <table cellspacing="0" class="auto-style7" border="0">
         <tr>
-          <td><center>IISE Group of Institutes, Lucknow, Kalyanpur West, Mohhamadpur Khatri,226022<br />
-                Important Links<br />
-                <a href="http://www.CRM.com">www.CRM.com</a>, +91-9865234565<br /></center>
+                              <td><center>
+
+                  <span class="footer-links">
+    <a href="mailto:crmindia@gmail.com" class="footer-link">crmindia@gmail.com</a> |
+    <a href="tel:+919865234565" class="footer-link">+91-9865234565</a> 
+                      <p>&copy; 2025 Your Company Name. All rights reserved.</p>
+                  </span>
+<span class="footer-social">
+   <b> Follow us: </b>
+    <a href="#" class="footer-link">Facebook</a> |
+    <a href="#" class="footer-link">Twitter</a> |
+    <a href="#" class="footer-link">Instagram</a>
+</span>
+                </center>
             </td>
         </tr>
     </table>

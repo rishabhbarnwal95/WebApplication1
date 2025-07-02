@@ -4,7 +4,7 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title></title>
+    <title>Complain Registration Reply</title>
     <style type="text/css">
         body{
             background-color:#ccff66;
@@ -12,6 +12,15 @@
         .auto-style2 {
             width: 1200px;
             height: 200px;
+            font-size:20px;
+            color:orangered;
+        }
+        .div{
+            width:400px;
+            height:50px;
+            background-color:white;
+            text-align:center;
+            font-size:20px;
         }
     </style>
 </head>
@@ -22,7 +31,9 @@
             <table cellspacing="0" class="auto-style2">
                 <tr>
                     <td>
+                        <div class="div">
                         <asp:Label ID="lblreply" runat="server" Text="Label"></asp:Label>
+                            </div>
                         <asp:LinkButton ID="lbtnback" runat="server" OnClick="lbtnback_Click">Back</asp:LinkButton>
                     </td>
                 </tr>

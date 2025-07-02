@@ -26,6 +26,7 @@ namespace WebApplication1
             lblconfirmpass.Visible = false;
             lbldeclaration.Visible = false;
             lblcaptcha.Visible = false;
+            lblmessage.Visible = false;
             if (!IsPostBack)
             {
                 objadapt = new SqlDataAdapter("Select * from Country", objcon);
@@ -185,9 +186,10 @@ namespace WebApplication1
                         string datetodsay = DateTime.Now.ToString();
 
                         objcomm = new SqlCommand("insert into Register(Username,Phone,Email,CountryID,StateID,CityID,Pincode,gender,DOB,DOR,Housenumber)values('" + txtusername.Text + "','" + txtphonenum.Text + "','" + txtemail.Text + "','" + countyid + "','" + stateid + "','" + cityid + "','" + txtpincode.Text + "','" + gender + "','" + DOB + "','" + datetodsay + "','"+txthousenum.Text+"')", objcon);
-
                         objcomm.ExecuteNonQuery();
                         objcon.Close();
+                        lblmessage.Visible = true;
+                        lblmessage.Text = "Sucessfully Registered";
                     }
                 }
             }

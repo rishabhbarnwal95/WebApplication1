@@ -4,7 +4,7 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title></title>
+    <title>Register</title>
     <style type="text/css">
 
 
@@ -39,7 +39,7 @@
         .auto-style4 {
             width: 1000px;
             height: 500px;
-            background-color:#e6eeff;
+            background-color:lightskyblue;
         }
         .auto-style9 {
             width: 201px;
@@ -47,15 +47,29 @@
         .auto-style7 {
             width: 1000px;
             height: 100px;
-            background-color:#e6eeff;
-            border-top:2px solid black;
+            background-color:#19546d;
         }
         .auto-style10 {
+            margin:auto;
             width: 900px;
             height: 450px;
+            background-color: #88ec90;
+            border-style: ridge;
+            border-width: 5px;
+            border-color: goldenrod;
+            padding: 20px;
+            
         }
         body{
             background-color:#ccff66;
+        }
+        .footer-links {
+            color: white;
+            padding: 20px;
+        }
+
+        .footer-link {
+            color: white;
         }
         </style>
 </head>
@@ -106,7 +120,7 @@
     </table>
     <table cellspacing="0" class="auto-style4" border="0">
         <tr>
-            <td class="auto-style9"><center>
+            <td class="auto-style9">
                 <table cellspacing="0" class="auto-style10">
                     <tr>
                         <td>
@@ -225,28 +239,41 @@
                     </tr>
                     <tr>
                         <td colspan="4">
-                            <asp:CheckBox ID="checkdeclaration" runat="server" Text="I accept that above information is valid" />
+                           <center> <asp:CheckBox ID="checkdeclaration" runat="server" Text="I accept that above information is valid" /></center>
                         <asp:Label ID="lbldeclaration" runat="server" Text="Label"></asp:Label>
                         </td>
                         
                     </tr>
                     <tr>
                         <td colspan="4">
-                        <center><asp:Button ID="btnregister" runat="server" Text="Register" OnClick="btnregister_Click" BackColor="#FF9966" BorderStyle="None" Font-Bold="True" ForeColor="White" Height="27px" Width="85px" /></center> 
+                        <center><asp:Button ID="btnregister" runat="server" Text="Register" OnClick="btnregister_Click" BackColor="#FF9966" BorderStyle="None" Font-Bold="True" ForeColor="White" Height="27px" Width="85px" />
+                            <asp:Label ID="lblmessage" runat="server" Text="Label"></asp:Label>
+                            </center> 
                         </td>
                        
                     </tr>
                 </table>
-                </center>
+                
             </td>
             
         </tr>
     </table>
     <table cellspacing="0" class="auto-style7" border="0">
         <tr>
-          <td><center>IISE Group of Institutes, Lucknow, Kalyanpur West, Mohhamadpur Khatri,226022<br />
-                Important Links<br />
-                <a href="http://www.CRM.com">www.CRM.com</a>, +91-9865234565<br /></center>
+                    <td><center>
+
+                  <span class="footer-links">
+    <a href="mailto:crmindia@gmail.com" class="footer-link">crmindia@gmail.com</a> |
+    <a href="tel:+919865234565" class="footer-link">+91-9865234565</a> 
+                      <p>&copy; 2025 Your Company Name. All rights reserved.</p>
+                  </span>
+<span class="footer-social">
+   <b> Follow us: </b>
+    <a href="#" class="footer-link">Facebook</a> |
+    <a href="#" class="footer-link">Twitter</a> |
+    <a href="#" class="footer-link">Instagram</a>
+</span>
+                </center>
             </td>
         </tr>
     </table>
